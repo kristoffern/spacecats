@@ -22,7 +22,7 @@ class Command(BaseCommand):
 
         for _ in range(5):
             mission_name = f"Mission {random.randint(1,100)}"
-            description = f"A mission to explore the unknown regions of space."
+            description = "A mission to explore the unknown regions of space."
             launch_date = datetime.date.today() - datetime.timedelta(days=random.randint(0,365))
 
             mission = Mission.objects.create(name=mission_name, description=description, launch_date=launch_date)

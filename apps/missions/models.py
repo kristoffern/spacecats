@@ -1,5 +1,5 @@
 from django.db import models
-from spacecats.models import SpaceCat
+from apps.spacecats.models import SpaceCat
 
 class Mission(models.Model):
     name = models.CharField(max_length=100)

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cat.name }} &mdash; SpaceCat</title>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body { font-family: 'Orbitron', sans-serif; background-color: #0d1b2a; color: #e0e1dd; margin: 0; padding: 0; }
+        .container { width: 80%; margin: 0 auto; padding: 20px; background: rgba(13, 27, 42, 0.8); border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+        h1 { text-align: center; color: #ffcc00; margin-bottom: 10px; text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); }
+        h2 { color: #ffcc00; margin-top: 30px; text-shadow: 0 0 8px rgba(255, 204, 0, 0.5); }
+        .summary { text-align: center; font-size: 1.2em; margin-bottom: 10px; }
+        .summary strong { color: #66fcf1; }
+        .nav { text-align: center; margin-top: 20px; }
+        .img-placeholder { width: 220px; height: 220px; margin: 10px auto 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #1b263b; border: 2px dashed #3e5c76; border-radius: 10px; }
+        .img-placeholder .glyph { font-size: 72px; line-height: 1; }
+        .img-placeholder .caption { margin-top: 10px; font-size: 0.75em; color: #778da9; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-field { max-width: 500px; margin: 10px auto; font-size: 1.1em; }
+        .detail-field .label { color: #ffcc00; text-transform: uppercase; margin-right: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #1b263b; border-radius: 10px; overflow: hidden; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #3e5c76; }
+        th { background-color: #003366; color: #ffcc00; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); }
+        td { color: #e0e1dd; }
+        td a { color: #66fcf1; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        tr:nth-child(even) { background-color: #1b263b; }
+        tbody tr.clickrow { cursor: pointer; }
+        tbody tr.clickrow:hover { background-color: #415a77; }
+        .back { display: inline-block; margin: 25px 8px 0; color: #ffcc00; text-decoration: none; border: 1px solid #ffcc00; padding: 8px 16px; border-radius: 6px; }
+        .back:hover { background-color: #ffcc00; color: #0d1b2a; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ cat.name }}</h1>
+        <div class="img-placeholder"><span class="glyph">&#128049;</span><span class="caption">Crew image placeholder</span></div>
+        <div class="detail-field"><span class="label">Role</span>{{ cat.role }}</div>
+        <div class="detail-field"><span class="label">Age</span>{{ cat.age }}</div>
+        <div class="detail-field"><span class="label">Mission count</span>{{ cat.mission_count }}</div>
+
+        <h2>Assigned missions</h2>
+        <table>
+            <thead><tr><th>Name</th><th>Launch Date</th></tr></thead>
+            <tbody>
+                {% for mission in cat.missions.all %}
+                <tr class="clickrow" onclick="location.href='/missions/{{ mission.id }}/'">
+                    <td><a href="/missions/{{ mission.id }}/">{{ mission.name }}</a></td>
+                    <td>{{ mission.launch_date }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="2">Not assigned to any mission.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="nav"><a class="back" href="/crew/">&larr; Back to crew</a></div>
+    </div>
+</body>
+</html>

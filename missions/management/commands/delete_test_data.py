@@ -1,12 +1,11 @@
 from django.core.management.base import BaseCommand
-from missions.models import Mission
-from spacecats.models import SpaceCat
+
+from missions.sample_data import delete_sample_data
+
 
 class Command(BaseCommand):
     help = "Delete all test data for SpaceCats and Mission models"
 
     def handle(self, *args, **options):
-        
-        SpaceCat.objects.all().delete()
-        Mission.objects.all().delete()
-        
+        cats, missions = delete_sample_data()
+        self.stdout.write(self.style.SUCCESS(f"Deleted {cats} SpaceCats and {missions} Missions"))

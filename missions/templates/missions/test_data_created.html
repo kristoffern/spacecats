@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Data Created</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(13, 27, 42, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00; /* Star Trek Gold */
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+        }
+        h2 {
+            color: #ffcc00;
+            margin-top: 30px;
+            text-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+        }
+        .summary {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .summary strong {
+            color: #66fcf1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #1b263b;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #3e5c76;
+        }
+        th {
+            background-color: #003366; /* Star Trek Blue */
+            color: #ffcc00;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+        }
+        td {
+            color: #e0e1dd;
+        }
+        tr:hover {
+            background-color: #415a77;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            color: #ffcc00;
+            text-decoration: none;
+            border: 1px solid #ffcc00;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        .back:hover {
+            background-color: #ffcc00;
+            color: #0d1b2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Data Created</h1>
+        <p class="summary">Created <strong>{{ cats|length }}</strong> SpaceCats and <strong>{{ missions|length }}</strong> Missions</p>
+
+        <h2>SpaceCats</h2>
+        <table>
+            <thead>
+                <tr><th>Name</th><th>Role</th><th>Mission Count</th><th>Age</th></tr>
+            </thead>
+            <tbody>
+                {% for cat in cats %}
+                <tr>
+                    <td>{{ cat.name }}</td>
+                    <td>{{ cat.role }}</td>
+                    <td>{{ cat.mission_count }}</td>
+                    <td>{{ cat.age }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Missions</h2>
+        <table>
+            <thead>
+                <tr><th>Name</th><th>Launch Date</th><th>Crew</th></tr>
+            </thead>
+            <tbody>
+                {% for mission in missions %}
+                <tr>
+                    <td>{{ mission.name }}</td>
+                    <td>{{ mission.launch_date }}</td>
+                    <td>{% for c in mission.spacecats.all %}{{ c.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="back" href="/crew/">View the crew &rarr;</a>
+    </div>
+</body>
+</html>

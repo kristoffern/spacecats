@@ -1,0 +1,123 @@
+#+TITLE: Spacecats mission scenes - prompts
+#+FILETAGS: :spacecats:images:prompts:
+
+* How to use this
+Deep-space mission backdrops for the demo app. The STYLE block is sent with every image;
+only the Subject changes per slot. Generate with =python generate.py missions all=,
+curate, then =python resize_accept.py missions=.
+
+#+begin_style
+Style: a cinematic deep-space scene, rich painterly sci-fi illustration, atmospheric and
+detailed. Keep the rendering style, palette and mood identical across the whole set; only
+the subject and framing change.
+
+Palette: deep navy and black space (#0d1b2a) with gold, amber and cyan highlights,
+matching a gold-and-blue starship theme. Clean, not cluttered with lens flares.
+
+Composition: 16:9 horizontal, the main subject off-centre with generous dark empty space
+around it, so it reads as an atmospheric backdrop.
+
+Exclusions: no text, no numerals, no labels, no people, no spaceships unless the subject
+says so, no borders or frame, no UI overlays.
+#+end_style
+
+* 1. Ringed gas giant
+#+begin_example
+a vast ringed gas giant with amber and cream cloud bands and a bright ring system, seen from a distance, wide framing.
+#+end_example
+* 2. Asteroid field
+#+begin_example
+a dense asteroid field of rocky debris catching warm gold light, medium framing.
+#+end_example
+* 3. Star-forming nebula
+#+begin_example
+a glowing blue star-forming nebula with clusters of newborn stars, wide framing.
+#+end_example
+* 4. Binary star system
+#+begin_example
+a binary star system with two suns, one gold and one cyan, hanging in the dark, wide framing.
+#+end_example
+* 5. Red planet, two moons
+#+begin_example
+a rocky red planet with two small cratered moons nearby, medium framing.
+#+end_example
+* 6. Ice world
+#+begin_example
+an ice world with a cracked frozen surface glinting cyan, medium framing.
+#+end_example
+* 7. Comet
+#+begin_example
+a comet with a long luminous tail crossing the black void, wide framing.
+#+end_example
+* 8. Spiral galaxy
+#+begin_example
+a spiral galaxy seen nearly edge-on, glowing gold at its core, wide framing.
+#+end_example
+* 9. Moon over planet
+#+begin_example
+a single pale moon rising over the dark curved limb of a planet, medium framing.
+#+end_example
+* 10. Asteroids near a sun
+#+begin_example
+drifting asteroids silhouetted near a warm gold sun, wide framing.
+#+end_example
+* 11. Purple nebula
+#+begin_example
+a dense purple nebula threaded with dark dust lanes, wide framing.
+#+end_example
+* 12. Volcanic planet
+#+begin_example
+a volcanic planet with glowing lava fractures across its dark surface, medium framing.
+#+end_example
+* 13. Gas giant storm, close
+#+begin_example
+a close view of a gas giant's great swirling amber storm, macro framing.
+#+end_example
+* 14. Star cluster
+#+begin_example
+a dense globular star cluster of gold and white stars, wide framing.
+#+end_example
+* 15. Single asteroid, close
+#+begin_example
+close detail of a single pitted asteroid with a glint of cyan ice, macro framing.
+#+end_example
+* 16. Blue dwarf planet
+#+begin_example
+a pale blue dwarf planet alone in the dark, medium framing.
+#+end_example
+* 17. Solar flare
+#+begin_example
+a bright solar flare arcing off the edge of a star, macro framing.
+#+end_example
+* 18. Debris ring
+#+begin_example
+a ring of debris circling a dark planet, medium framing.
+#+end_example
+* 19. Twin moons eclipsing
+#+begin_example
+twin moons mid-eclipse over a planet's limb, medium framing.
+#+end_example
+* 20. Distant galaxy in the void
+#+begin_example
+a deep empty void with a single distant glowing galaxy, wide framing.
+#+end_example
+* 21. Cracked asteroid
+#+begin_example
+a cracked asteroid split open, close detail, macro framing.
+#+end_example
+* 22. Aurora over a dark world
+#+begin_example
+a green-gold aurora shimmering over a dark planet, medium framing.
+#+end_example
+* 23. Protoplanetary disk
+#+begin_example
+a dusty protoplanetary disk swirling around a young star, wide framing.
+#+end_example
+* 24. Ringed ice giant
+#+begin_example
+a ringed ice giant glowing cold cyan, wide framing.
+#+end_example
+* 25. Canyon planet from orbit
+#+begin_example
+a rocky canyon-scarred planet seen from low orbit, medium framing.
+#+end_example

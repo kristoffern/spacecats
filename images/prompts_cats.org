@@ -1,0 +1,130 @@
+#+TITLE: Spacecats crew-cat portraits - prompts
+#+FILETAGS: :spacecats:images:prompts:
+
+* How to use this
+Anthropomorphic uniformed crew-cat headshots for the demo app. The STYLE block is
+sent with every image; only the Subject changes per slot, which is what keeps the 25
+portraits one consistent set. Generate with =python generate.py cats all=, curate on a
+contact sheet, regenerate weak slots, then =python resize_accept.py cats=.
+
+#+begin_style
+Style: a polished sci-fi character portrait in a clean painterly digital-illustration
+style, friendly and characterful. A single ANTHROPOMORPHIC cat crew member, shown
+head-and-shoulders like an ID portrait, wearing a fitted starship uniform. Keep the art
+style, lighting, uniform design and framing identical across the whole set; only the cat
+and its expression change.
+
+Uniform: a dark navy starship crew uniform with a gold shoulder yoke and a small plain
+gold collar tab, in a Star Trek gold-and-blue palette. The same uniform on every cat. No
+visible writing or numbers anywhere on it.
+
+Background: a simple, softly out-of-focus starship-bridge interior in deep navy
+(#0d1b2a), gentle rim light and a faint warm glow. Uncluttered, no readable panels.
+
+Framing: a centred head-and-shoulders portrait, the cat facing forward or in a slight
+three-quarter turn, looking confident and alert.
+
+Exclusions: no text, no numerals, no name tags, no written badges, no borders or frame,
+no photograph, no humans. Exactly one cat.
+#+end_style
+
+* 1. Orange tabby, confident
+#+begin_example
+a confident orange tabby with amber eyes, in a slight three-quarter turn to the left, ears up, a faintly self-assured look.
+#+end_example
+* 2. Black cat, calm
+#+begin_example
+a sleek black cat with bright green eyes, facing forward, calm and composed.
+#+end_example
+* 3. White long-hair, aloof
+#+begin_example
+a fluffy white long-haired cat, facing forward, poised and slightly aloof, pale blue eyes.
+#+end_example
+* 4. Grey British shorthair, serious
+#+begin_example
+a round-faced grey British shorthair with copper eyes, facing forward, serious and steady.
+#+end_example
+* 5. Tuxedo cat, alert
+#+begin_example
+a black-and-white tuxedo cat, a slight turn to the right, alert and attentive.
+#+end_example
+* 6. Calico, curious
+#+begin_example
+a calico cat with its head tilted slightly, curious and bright-eyed.
+#+end_example
+* 7. Seal-point Siamese, poised
+#+begin_example
+a seal-point Siamese with deep blue eyes, in a three-quarter turn to the right, elegant and poised.
+#+end_example
+* 8. Maine coon, veteran
+#+begin_example
+a large Maine coon with a big neck ruff and tufted ears, facing forward, a grizzled, seen-it-all veteran look.
+#+end_example
+* 9. Ginger-and-white, eager
+#+begin_example
+a young ginger-and-white cat, facing forward, eager and wide-eyed.
+#+end_example
+* 10. Tortoiseshell, intense
+#+begin_example
+a tortoiseshell cat, facing forward, an intense, focused stare.
+#+end_example
+* 11. Russian blue, focused
+#+begin_example
+a sleek Russian blue with green eyes, in a slight three-quarter turn to the left, quietly focused.
+#+end_example
+* 12. Brown tabby with visor, studious
+#+begin_example
+a brown tabby wearing a slim translucent tech visor over one eye, facing forward, studious.
+#+end_example
+* 13. Cream-point, gentle
+#+begin_example
+a cream-point cat with soft features, facing forward, gentle with a faint kind look.
+#+end_example
+* 14. Notch-eared black-and-white, tough
+#+begin_example
+a black-and-white cat with a small notch in one ear, facing forward, tough and unbothered.
+#+end_example
+* 15. Silver tabby, bright
+#+begin_example
+a silver tabby with bright eyes, a slight turn to the left, keen and ready.
+#+end_example
+* 16. Chocolate Burmese, warm
+#+begin_example
+a chocolate-brown Burmese with golden eyes, facing forward, warm and friendly.
+#+end_example
+* 17. Long-haired grey, dignified
+#+begin_example
+a long-haired grey cat with its chin slightly raised, facing forward, dignified.
+#+end_example
+* 18. Bengal-spotted, athletic
+#+begin_example
+a spotted Bengal cat, in a three-quarter turn to the right, athletic and keen.
+#+end_example
+* 19. White with black patches, friendly
+#+begin_example
+a white cat with a few black patches, facing forward, an open friendly look.
+#+end_example
+* 20. Smoky grey, mysterious
+#+begin_example
+a smoky grey cat with half-lidded amber eyes, facing forward, quietly mysterious.
+#+end_example
+* 21. Red tabby, grinning
+#+begin_example
+a red tabby with prominent whiskers, a slight turn to the right, a faint grin.
+#+end_example
+* 22. Seal-point captain
+#+begin_example
+a seal-point cat with a composed captain's air, facing forward, calm authority.
+#+end_example
+* 23. Dilute calico, approachable
+#+begin_example
+a soft dilute calico, in a slight three-quarter turn to the left, approachable and mild.
+#+end_example
+* 24. Ebony, watchful
+#+begin_example
+an ebony-black cat with amber eyes, facing forward, stern and watchful.
+#+end_example
+* 25. Young patched tabby, rookie
+#+begin_example
+a young patched tabby, facing forward, a slightly nervous rookie look.
+#+end_example

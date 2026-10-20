@@ -95,9 +95,18 @@ def main():
         path = outdir / f"{base}{k}.png"
         print(f"#{n} {s['title']} ...", flush=True)
         t = time.time()
-        r = client.images.generate(model=a.model, prompt=prompt, size=size, quality=a.quality)
-        path.write_bytes(base64.b64decode(r.data[0].b64_json))
-        print(f"   -> {path.name} ({time.time() - t:.0f}s)", flush=True)
+        for attempt in (1, 2):
+            try:
+                r = client.images.generate(model=a.model, prompt=prompt, size=size, quality=a.quality)
+                path.write_bytes(base64.b64decode(r.data[0].b64_json))
+                print(f"   -> {path.name} ({time.time() - t:.0f}s)", flush=True)
+                break
+            except Exception as e:
+                print(f"   ! attempt {attempt}: {type(e).__name__}: {str(e)[:120]}", flush=True)
+                if attempt == 2:
+                    print(f"   #{n} SKIPPED", flush=True)
+                else:
+                    time.sleep(5)
         if i < len(want) - 1:
             time.sleep(a.pause)
 
